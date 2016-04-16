@@ -875,7 +875,7 @@ void lenv_add_builtins(lenv* e) {
   lenv_add_builtin(e, "head", builtin_head); // Get the first value of a list
   lenv_add_builtin(e, "tail", builtin_tail); // Get all but the first value of a list
   lenv_add_builtin(e, "eval", builtin_eval); // Evaluate a list as a S-Expression
-  lenv_add_builtin(e, "join", builtin_join); // Join a item with a lis
+  lenv_add_builtin(e, "join", builtin_join); // Join a item with a list
 
   /* Mathematical Procedures */
   lenv_add_builtin(e, "+", builtin_add); // Add
