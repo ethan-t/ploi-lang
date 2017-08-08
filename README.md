@@ -36,8 +36,9 @@ The name, ploi, stands for Powerful List Operation Interpreter.
 
 ## Installation
 
-I haven't written a Makefile yet, you'll have to compile it yourself.
-```sh
+You'll have to compile it yourself.
+```
+sh
 git clone https://github.com/LambdaProgrammer/ploi-lang.git
 gcc --std=c99 ploi.c mpc.c -lm -ledit -o ploi
 ```
@@ -61,7 +62,7 @@ There are 34 builtin procedures. Here's a list of all of them.
 |`/`|Divide|
 |`%`|Modulo|
 |`^`|Power|
-|`assert`|Raise and error if a condition is not 1|
+|`assert`|Raise an error if a condition is not 1|
 |`if`|Conditional|
 |`==`|Equal|
 |`!=`|Not Equal|
@@ -81,10 +82,6 @@ There are 34 builtin procedures. Here's a list of all of them.
 |`Double`|Convert to a Double|
 |`List`|Return a list of the arguments|
 |`type`|Get the type of a input as a string|
-
-## Contributors
-
-I would be very happy if you would contribute. I am a very new C programmer, so I need ~~lots of~~ some help.
 
 ## License
 
