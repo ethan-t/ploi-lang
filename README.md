@@ -85,4 +85,4 @@ There are 34 builtin procedures. Here's a list of all of them.
 
 ## License
 
-Ploi is published under the [zlib/libpng license](https://www.tldrlegal.com/l/zlib)
+Ploi is published under the CC BY-NC-SA License
