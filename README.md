@@ -85,4 +85,4 @@ There are 34 builtin procedures. Here's a list of all of them.
 
 ## License
 
-Ploi is published under the CC BY-NC-SA License
+All code written here by me is in the public domain.
