@@ -39,7 +39,7 @@ The name, ploi, stands for Powerful List Operation Interpreter.
 You'll have to compile it yourself.
 ```
 sh
-git clone https://github.com/LambdaProgrammer/ploi-lang.git
+git clone https://github.com/ethan-t/ploi-lang.git
 gcc --std=c99 ploi.c mpc.c -lm -ledit -o ploi
 ```
 
@@ -82,7 +82,3 @@ There are 34 builtin procedures. Here's a list of all of them.
 |`Double`|Convert to a Double|
 |`List`|Return a list of the arguments|
 |`type`|Get the type of a input as a string|
-
-## License
-
-All code written here by me is in the public domain.
