@@ -786,20 +786,6 @@ lval* builtin_print(lenv* e, lval* a) {
   return lval_sexpr();
 }
 
-lval* builtin_println(lenv* e, lval* a) {
-
-  /* Print each argument followed by a space */
-  for (int i = 0; i < a->count; i++) {
-    lval_print(a->cell[i]); putchar(' ');
-  }
-
-  /* Print a newline and delete arguments */
-  putchar('\n');
-  lval_del(a);
-
-  return lval_sexpr();
-}
-
 lval* builtin_input(lenv* e, lval* a) {
   LASSERT_COUNT("input", a, 1);
   LASSERT_ISTYPE("input", a, 0, LVAL_STR);
@@ -899,7 +885,6 @@ void lenv_add_builtins(lenv* e) {
   lenv_add_builtin(e, "imports",  builtin_imports); // Loads the variables and procedures of a file
   lenv_add_builtin(e, "throw", builtin_throw); // Raises an error
   lenv_add_builtin(e, "print", builtin_print); // Prints all the args with a newline after the last one
-  lenv_add_builtin(e, "println", builtin_println); // Prints with a newline after each arg
   lenv_add_builtin(e, "input", builtin_input); // Get user input
 
   /* OS Procedures */
