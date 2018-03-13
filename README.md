@@ -2,7 +2,7 @@
 
 ## Synopsis
 
-Ploi is a programming language based on [Build Your Own Lisp](http://buildyourownlisp.com/). Ploi, my take on BYOL, has elements that make it more readable and approachable to non-Lisp programmers (Like me!). It uses Python-style lists, and has a minimal set of builtins, so most functionality comes from the standard library, which ~~steals~~ borrows functions from the Haskell Prelude.
+Ploi is a programming language based on [Build Your Own Lisp](http://buildyourownlisp.com/). Ploi, my take on BYOL, has elements that make it more readable and approachable to non-Lisp programmers (Like me!). It uses Python-style lists, and has a minimal set of builtins, so most functionality comes from the standard library, which takes functions from the Haskell Prelude.
 
 ## Code Example
 
@@ -32,32 +32,33 @@ Ploi is a programming language based on [Build Your Own Lisp](http://buildyourow
 
 ## Name
 
-The name, ploi, stands for Powerful List Operation Interpreter. 
+The name, ploi, stands for Powerful List Operation Interpreter.
 
 ## Installation
 
 You'll have to compile it yourself.
-```
-sh
+```sh
 git clone https://github.com/ethan-t/ploi-lang.git
+wget https://github.com/orangeduck/mpc/blob/master/mpc.c
+wget https://github.com/orangeduck/mpc/blob/master/mpc.h
 gcc --std=c99 ploi.c mpc.c -lm -ledit -o ploi
 ```
 
 ## Builtins
 
-There are 34 builtin procedures. Here's a list of all of them.
+There are 34 built-in procedures. Here's a list of all of them.
 
 |Name|Use|
 |:-:|:-:|
 |`lambda`|Return a lambda function|
 |`define`|Define a global variable|
 |`put`|Define a local variable|
-|`head`|Get the first calue of a list|
+|`head`|Get the first value of a list|
 |`tail`|Get all but the first value of a list|
 |`eval`|Evaluate a list as a S-Expression|
-|`join`|Preappend value(s) to a list|
+|`join`|Prepends value(s) to a list|
 |`+`|Add|
-|`-`|Subtrace|
+|`-`|Subtract|
 |`*`|Multiply|
 |`/`|Divide|
 |`%`|Modulo|
