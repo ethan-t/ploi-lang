@@ -1,0 +1,36 @@
+# Core procedures that are necessary for other libraries
+
+### Useful variables
+(define [null] [])
+(define [true] 1)
+(define [false] 0)
+
+### Essential procedures
+
+# Procedure to ease the creation of procedures
+(define [proc] (lambda [name args body]
+    [define (name) (lambda (args) body)]
+  )
+)
+
+# b
+(proc [unpack] [p l]
+  [eval (join (List p) l)]
+)
+
+# b
+(proc [pack] [p & l]
+  [p l]
+)
+
+# Execute a sequence of expressions
+(proc [do] [& seq]
+  [if (== seq null)
+    [null]
+    [last seq]
+  ]
+)
+
+# Open a new scope
+(proc [let] [p]
+ [((lambda [_] p) ())]

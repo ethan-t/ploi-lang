@@ -74,7 +74,6 @@ There are 34 built-in procedures. Here's a list of all of them.
 |`imports`|Load the contents of a file|
 |`throw`|Throw an error|
 |`print`|Print args with no newline between|
-|`println`|Print args with a newline between|
 |`input`|Get textual user input|
 |`exit`|Exit with a error code|
 |`argc`|Get the number of command line arguments|
