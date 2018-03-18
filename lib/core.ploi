@@ -34,3 +34,21 @@
 # Open a new scope
 (proc [let] [p]
  [((lambda [_] p) ())]
+)
+
+### Logical procedures
+
+(proc [not] [x]
+  [if (== x 1)
+    [0]
+    [1]
+  ]
+)
+
+(proc [and] [x y]
+  [== 2 (+ x y)]
+)
+
+(proc [or] [x y]
+  [>= (+ x y) 1]
+)
