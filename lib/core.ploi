@@ -38,6 +38,7 @@
 
 ### Logical procedures
 
+# Invert the outcome of x
 (proc [not] [x]
   [if (== x 1)
     [0]
@@ -45,10 +46,51 @@
   ]
 )
 
+# Check if both x and y are true
 (proc [and] [x y]
   [== 2 (+ x y)]
 )
 
+# Check if x and/or y and true
 (proc [or] [x y]
   [>= (+ x y) 1]
+)
+
+### Switch Statement
+
+(proc [switch] [& cases]
+  [if (== cases null)
+    [raise "No cases input or evaluated to true."]
+    [if (fst (fst cases))
+      [snd (fst cases)]
+      [unpack switch (tail cases)]
+    ]
+  ]
+)
+
+### List procedures
+
+# Get the nth item of the list
+(proc [nth] [n l]
+  [if (== n 0)
+    [eval (head l)]
+    [nth (- n 1) (tail l)]
+  ]
+)
+
+## Quick procedures for the first three list items
+
+# First item
+(proc [fst] [l]
+  [nth 0 l]
+)
+
+# Second item
+(proc [snd] [l]
+  [nth 1 l]
+)
+
+# Third item
+(proc [trd] [l]
+  [nth 2 l]
 )
