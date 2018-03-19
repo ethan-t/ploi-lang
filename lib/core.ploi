@@ -70,6 +70,19 @@
 
 ### List procedures
 
+# Count the number of items in the list
+(proc [length] [l]
+  [if (== l null)
+    [0]
+    [+ 1 (length (tail l))]
+  ]
+)
+
+# Get the last item of a list
+(proc [last] [l]
+  [nth (- (length l) 1) l]
+)
+
 # Get the nth item of the list
 (proc [nth] [n l]
   [if (== n 0)
